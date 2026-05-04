@@ -141,8 +141,11 @@ export default function CTASection() {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex items-center justify-center gap-2 px-8 py-4 bg-cold text-background font-body text-sm tracking-[0.1em] uppercase font-medium hover:opacity-90 transition-opacity duration-300 whitespace-nowrap disabled:opacity-60"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
+                className="flex items-center justify-center gap-2 px-8 py-4 text-black font-body text-sm tracking-[0.1em] uppercase font-medium hover:opacity-90 transition-opacity duration-300 whitespace-nowrap disabled:opacity-60"
+                style={{
+                  background: "linear-gradient(135deg, #8D745D 0%, #8D5027 100%)",
+                  fontFamily: "'DM Sans', sans-serif",
+                }}
               >
                 {loading ? (
                   <Loader2 size={14} className="animate-spin" />
