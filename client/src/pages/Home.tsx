@@ -12,6 +12,7 @@ import ScienceSection from "@/components/sections/ScienceSection";
 import PricingSection from "@/components/sections/PricingSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import CTASection from "@/components/sections/CTASection";
+import PhotoGallerySection from "@/components/sections/PhotoGallerySection";
 import Footer from "@/components/sections/Footer";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
       <ScienceSection />
       <PricingSection />
       <TestimonialsSection />
+      <PhotoGallerySection />
       <CTASection />
       <Footer />
     </div>

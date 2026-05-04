@@ -6,26 +6,13 @@
 
 import { Instagram, MapPin } from "lucide-react";
 
-function SynaptiqMark({ size = 44, color = "#8D745D" }: { size?: number; color?: string }) {
+function SynaptiqMark({ size = 44 }: { size?: number; color?: string }) {
   return (
-    <svg
-      viewBox="0 0 80 52"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      style={{ height: size, width: "auto" }}
-    >
-      <rect x="1.5" y="1.5" width="77" height="49" rx="1.5" stroke={color} strokeWidth="2" fill="none" />
-      <circle cx="8" cy="26" r="2.5" fill={color} />
-      <circle cx="72" cy="26" r="2.5" fill={color} />
-      <path
-        d="M10.5 26 C16 26 16 12 22 12 C28 12 28 40 34 40 C40 40 40 12 46 12 C52 12 52 40 58 40 C64 40 64 26 69.5 26"
-        stroke={color}
-        strokeWidth="2.2"
-        fill="none"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <img
+      src="/images/logo-gold.png"
+      alt="SynaptIQ BioCorp"
+      style={{ height: size, width: "auto", objectFit: "contain" }}
+    />
   );
 }
 

@@ -39,8 +39,8 @@ export default function AboutSection() {
           <div className="fade-in relative">
             <div className="relative overflow-hidden rounded-sm">
               <img
-                src="/images/about-synaptiq.jpg"
-                alt="Synaptiq contrast therapy facility"
+                src="/images/sauna-interior.jpg"
+                alt="Synaptiq luxury sauna interior"
                 className="w-full h-[500px] lg:h-[650px] object-cover"
               />
               {/* Overlay */}
