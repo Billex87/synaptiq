@@ -22,18 +22,18 @@ export default function Footer() {
 
   return (
     <footer
-      className="py-16 border-t"
+      className="py-8 lg:py-12 border-t"
       style={{
         background: "oklch(0.05 0.002 240)",
         borderColor: "oklch(1 0 0 / 6%)",
       }}
     >
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-8 lg:mb-10">
           {/* Brand */}
           <div>
-            <div className="mb-5">
-              <SynaptiqMark size={80} />
+            <div className="mb-3">
+              <SynaptiqMark size={60} />
             </div>
             <p
               style={{
@@ -142,8 +142,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="gold-rule mb-8" />
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="gold-rule mb-6" />
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
           <p
             style={{
               fontFamily: "'DM Sans', sans-serif",
