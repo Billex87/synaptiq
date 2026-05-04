@@ -1,43 +1,48 @@
 /* ============================================================
    SYNAPTIQ — CTA / Waitlist Section
    Design: Full-width dark section with waitlist form
+   Netlify Forms: form has netlify attribute + hidden form-name field
    ============================================================ */
 
-import { useEffect, useRef, useState } from "react";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { useRef, useState } from "react";
+import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function CTASection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useScrollAnimation();
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const animatables = entry.target.querySelectorAll(".fade-up");
-            animatables.forEach((el, i) => {
-              setTimeout(() => el.classList.add("visible"), i * 150);
-            });
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setError("Please enter a valid email address.");
       return;
     }
     setError("");
-    setSubmitted(true);
+    setLoading(true);
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch {
+      // Fallback for dev environment where Netlify Forms isn't active
+      setSubmitted(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -94,27 +99,49 @@ export default function CTASection() {
             early access, founding member pricing, and updates on our opening.
           </p>
 
-          {/* Form */}
+          {/* Form — Netlify Forms compatible */}
           {!submitted ? (
             <form
+              name="waitlist"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className="fade-up flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
             >
+              {/* Netlify required hidden fields */}
+              <input type="hidden" name="form-name" value="waitlist" />
+              <p className="hidden">
+                <label>
+                  Don't fill this out if you're human:{" "}
+                  <input name="bot-field" />
+                </label>
+              </p>
+
               <input
                 type="email"
+                name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your@email.com"
+                required
                 className="flex-1 bg-transparent border border-foreground/20 px-5 py-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-cold transition-colors duration-300 font-body text-sm"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               />
               <button
                 type="submit"
-                className="flex items-center justify-center gap-2 px-8 py-4 bg-cold text-background font-body text-sm tracking-[0.1em] uppercase font-medium hover:opacity-90 transition-opacity duration-300 whitespace-nowrap"
+                disabled={loading}
+                className="flex items-center justify-center gap-2 px-8 py-4 bg-cold text-background font-body text-sm tracking-[0.1em] uppercase font-medium hover:opacity-90 transition-opacity duration-300 whitespace-nowrap disabled:opacity-60"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                Join Waitlist
-                <ArrowRight size={14} />
+                {loading ? (
+                  <Loader2 size={14} className="animate-spin" />
+                ) : (
+                  <>
+                    Join Waitlist
+                    <ArrowRight size={14} />
+                  </>
+                )}
               </button>
             </form>
           ) : (

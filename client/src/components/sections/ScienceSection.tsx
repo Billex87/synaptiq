@@ -1,9 +1,11 @@
 /* ============================================================
    SYNAPTIQ — Science Section
-   Design: Dark editorial layout with protocol steps
+   Design: Dark editorial layout with protocol steps + video embed
    ============================================================ */
 
-import { useEffect, useRef } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Play } from "lucide-react";
+import { useState } from "react";
 
 const protocols = [
   {
@@ -44,25 +46,12 @@ const stats = [
 ];
 
 export default function ScienceSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useScrollAnimation();
+  const [videoActive, setVideoActive] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const animatables = entry.target.querySelectorAll(".fade-up");
-            animatables.forEach((el, i) => {
-              setTimeout(() => el.classList.add("visible"), i * 120);
-            });
-          }
-        });
-      },
-      { threshold: 0.05 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
+  // Ambient contrast therapy / cold plunge explainer — Andrew Huberman on cold exposure
+  // This is a publicly available science explainer that aligns with the brand's positioning
+  const videoId = "x3MgDtZSABc";
 
   return (
     <section
@@ -130,7 +119,7 @@ export default function ScienceSection() {
 
         {/* Stats row */}
         <div className="gold-rule mb-16" />
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
           {stats.map((stat, idx) => (
             <div
               key={stat.label}
@@ -151,6 +140,112 @@ export default function ScienceSection() {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Video embed */}
+        <div className="fade-up">
+          {/* Video label */}
+          <div className="flex items-center gap-4 mb-8">
+            <div className="h-px w-12 bg-gold opacity-40" />
+            <span
+              className="text-gold text-[10px] tracking-[0.4em] uppercase"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              The Research
+            </span>
+            <div className="h-px flex-1 bg-gold opacity-10" />
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            {/* Copy */}
+            <div>
+              <h3
+                className="font-display text-3xl md:text-4xl font-light text-foreground leading-[1.1] mb-4"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                The Science Behind
+                <br />
+                <em className="italic text-cold">Cold Exposure.</em>
+              </h3>
+              <p
+                className="font-body text-sm text-muted-foreground leading-relaxed mb-6"
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
+              >
+                Dr. Andrew Huberman breaks down the neurological and
+                physiological mechanisms behind deliberate cold exposure —
+                including the norepinephrine response, dopamine elevation, and
+                why the mental resilience built in cold water transfers directly
+                to performance under stress.
+              </p>
+              <div className="flex items-center gap-3">
+                <div
+                  className="w-1 h-8"
+                  style={{ background: "oklch(0.72 0.12 192)" }}
+                />
+                <p
+                  className="font-body text-xs text-muted-foreground"
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                >
+                  Huberman Lab · Stanford Neuroscience
+                </p>
+              </div>
+            </div>
+
+            {/* Video player */}
+            <div className="relative aspect-video overflow-hidden border border-foreground/10 group">
+              {!videoActive ? (
+                /* Thumbnail with play button */
+                <button
+                  onClick={() => setVideoActive(true)}
+                  className="relative w-full h-full block"
+                  aria-label="Play video"
+                >
+                  <img
+                    src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                    alt="Cold exposure science explainer"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Dark overlay */}
+                  <div
+                    className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-60"
+                    style={{ background: "oklch(0.08 0.005 240 / 50%)" }}
+                  />
+                  {/* Play button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div
+                      className="flex items-center justify-center w-16 h-16 rounded-full border border-foreground/30 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:border-cold"
+                      style={{ background: "oklch(0.08 0.005 240 / 70%)" }}
+                    >
+                      <Play
+                        size={20}
+                        className="text-foreground ml-1"
+                        fill="currentColor"
+                      />
+                    </div>
+                  </div>
+                  {/* Duration label */}
+                  <div
+                    className="absolute bottom-3 right-3 px-2 py-1 text-[10px] tracking-[0.1em] uppercase text-foreground/70"
+                    style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      background: "oklch(0.08 0.005 240 / 80%)",
+                    }}
+                  >
+                    Huberman Lab
+                  </div>
+                </button>
+              ) : (
+                /* Active iframe */
+                <iframe
+                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&color=white`}
+                  title="Cold Exposure Science — Huberman Lab"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </section>
