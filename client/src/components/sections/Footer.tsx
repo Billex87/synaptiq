@@ -6,7 +6,8 @@
 
 import { Instagram, MapPin } from "lucide-react";
 
-function SynaptiqMark({ size = 44 }: { size?: number; color?: string }) {
+/* Full stacked logo PNG for footer */
+function SynaptiqMark({ size = 80 }: { size?: number; color?: string }) {
   return (
     <img
       src="/images/logo-gold.png"
@@ -31,37 +32,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="mb-5 flex items-center gap-3">
-              <SynaptiqMark size={44} color="#8D745D" />
-              <div className="flex flex-col leading-none">
-                <div
-                  style={{
-                    fontFamily: "'Nunito Sans', sans-serif",
-                    fontStretch: "expanded",
-                    fontWeight: 800,
-                    fontSize: "14px",
-                    letterSpacing: "0.28em",
-                    textTransform: "uppercase",
-                    color: "#ffffff",
-                  }}
-                >
-                  SYNAPTIQ
-                </div>
-                <div
-                  style={{
-                    fontFamily: "'Nunito Sans', sans-serif",
-                    fontStretch: "expanded",
-                    fontWeight: 400,
-                    fontSize: "8px",
-                    letterSpacing: "0.32em",
-                    textTransform: "uppercase",
-                    color: "#8D745D",
-                    marginTop: "4px",
-                  }}
-                >
-                  BIO CORP
-                </div>
-              </div>
+            <div className="mb-5">
+              <SynaptiqMark size={80} />
             </div>
             <p
               style={{

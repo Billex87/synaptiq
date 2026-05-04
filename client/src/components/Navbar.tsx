@@ -15,14 +15,51 @@ const navLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
-/* Real SynaptIQ gold logo PNG */
-function SynaptiqMark({ size = 40 }: { size?: number; color?: string }) {
+/* SynaptIQ neural wave mark — SVG only, no wordmark */
+function SynaptiqMark({ size = 40, color = "#8D745D" }: { size?: number; color?: string }) {
+  const c = color;
   return (
-    <img
-      src="/images/logo-gold.png"
-      alt="SynaptIQ BioCorp"
-      style={{ height: size, width: "auto", objectFit: "contain" }}
-    />
+    <svg
+      width={size * 1.6}
+      height={size}
+      viewBox="0 0 80 50"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="SynaptIQ mark"
+    >
+      {/* Outer rectangle border */}
+      <rect x="2" y="2" width="76" height="46" stroke={c} strokeWidth="2.5" fill="none" />
+      {/* Neural wave — 3 arch shapes inside the rectangle */}
+      {/* Left arch */}
+      <path
+        d="M10 34 C10 34 12 16 20 16 C28 16 28 34 28 34"
+        stroke={c}
+        strokeWidth="2.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      {/* Center arch */}
+      <path
+        d="M28 34 C28 34 30 16 40 16 C50 16 52 34 52 34"
+        stroke={c}
+        strokeWidth="2.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      {/* Right arch */}
+      <path
+        d="M52 34 C52 34 52 16 60 16 C68 16 70 34 70 34"
+        stroke={c}
+        strokeWidth="2.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      {/* Baseline connecting dots */}
+      <circle cx="10" cy="34" r="1.5" fill={c} />
+      <circle cx="28" cy="34" r="1.5" fill={c} />
+      <circle cx="52" cy="34" r="1.5" fill={c} />
+      <circle cx="70" cy="34" r="1.5" fill={c} />
+    </svg>
   );
 }
 
