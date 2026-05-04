@@ -1,6 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="4" fill="#0a0a0a"/>
-  <rect x="6" y="5" width="20" height="13" rx="0.5" stroke="#4dd9c0" stroke-width="1.5" fill="none"/>
-  <polyline points="8,16 13,7 18,16" stroke="#4dd9c0" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
-  <polyline points="14,16 19,7 24,16" stroke="#4dd9c0" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      body { background: #0a0a0a; }
+    </style>
+  </defs>
+  <rect width="256" height="256" fill="#0a0a0a"/>
+  <!-- Neural wave mark in gold -->
+  <g transform="translate(128, 128)">
+    <path d="M -40 0 Q -30 -15 -20 0 T 0 0 T 20 0 Q 30 -15 40 0" stroke="#8D745D" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M -40 15 Q -30 0 -20 15 T 0 15 T 20 15 Q 30 0 40 15" stroke="#8D745D" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M -40 -15 Q -30 -30 -20 -15 T 0 -15 T 20 -15 Q 30 -30 40 -15" stroke="#8D745D" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
 </svg>
