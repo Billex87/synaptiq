@@ -17,8 +17,8 @@ const services = [
     image: "/images/cold-plunge-hero.jpg",
     icon: Snowflake,
     color: "cold",
-    colorValue: "oklch(0.72 0.12 192)",
-    glowClass: "glow-cold",
+    colorValue: "#8D745D",
+    glowClass: "glow-mined",
     benefits: ["Reduces inflammation", "Boosts circulation", "Mental clarity"],
   },
   {
@@ -29,9 +29,9 @@ const services = [
       "Not just relaxation — intentional recovery. Heat exposure triggers cellular repair, improves cardiovascular health, and deepens sleep quality.",
     image: "/images/sauna-hero.jpg",
     icon: Flame,
-    color: "heat",
-    colorValue: "oklch(0.72 0.12 55)",
-    glowClass: "glow-heat",
+    color: "amber",
+    colorValue: "#8D5027",
+    glowClass: "glow-amber",
     benefits: ["Cellular repair", "Cardiovascular health", "Deep sleep"],
   },
   {
@@ -42,9 +42,9 @@ const services = [
       "Targeted wavelengths penetrate deep into tissue, stimulating mitochondrial function. Accelerate recovery, reduce pain, and improve skin health.",
     image: "/images/red-light-hero.jpg",
     icon: Zap,
-    color: "light-therapy",
-    colorValue: "oklch(0.65 0.22 25)",
-    glowClass: "glow-light",
+    color: "infrared",
+    colorValue: "#9C530D",
+    glowClass: "glow-infrared",
     benefits: ["Mitochondrial boost", "Pain reduction", "Skin health"],
   },
   {
@@ -55,9 +55,9 @@ const services = [
       "Pneumatic compression stimulates lymphatic flow and improves circulation — clearing buildup, reducing pressure, and accelerating the way your body actually recovers.",
     image: "/images/compression-hero.jpg",
     icon: Wind,
-    color: "cold",
-    colorValue: "oklch(0.72 0.12 192)",
-    glowClass: "glow-cold",
+    color: "plunge",
+    colorValue: "#8D745D",
+    glowClass: "glow-mined",
     benefits: ["Lymphatic drainage", "Reduces swelling", "Faster recovery"],
   },
 ];
@@ -98,12 +98,20 @@ export default function ServicesSection() {
             <div className="h-px flex-1 max-w-[60px] bg-gold opacity-40" />
           </div>
           <h2
-            className="fade-up font-display text-5xl md:text-6xl lg:text-7xl font-light text-foreground leading-[1.05]"
-            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            className="fade-up text-foreground"
+            style={{
+              fontFamily: "'Nunito Sans', sans-serif",
+              fontStretch: "expanded",
+              fontWeight: 800,
+              fontSize: "clamp(2.2rem, 5vw, 4rem)",
+              lineHeight: "1.05",
+              letterSpacing: "0.03em",
+              textTransform: "uppercase",
+            }}
           >
-            Science-Backed
+            SCIENCE-BACKED
             <br />
-            <em className="italic text-muted-foreground">Recovery Modalities</em>
+            <span style={{ color: "#8D745D" }}>RECOVERY MODALITIES</span>
           </h2>
         </div>
 
@@ -133,8 +141,14 @@ export default function ServicesSection() {
                   />
                   {/* Service number */}
                   <span
-                    className="absolute top-5 right-5 font-display text-5xl font-light opacity-20 text-foreground"
-                    style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                    className="absolute top-5 right-5 opacity-20 text-foreground"
+                    style={{
+                      fontFamily: "'Nunito Sans', sans-serif",
+                      fontStretch: "expanded",
+                      fontWeight: 900,
+                      fontSize: "3rem",
+                      letterSpacing: "0.05em",
+                    }}
                   >
                     {service.id}
                   </span>
@@ -152,8 +166,15 @@ export default function ServicesSection() {
                   <div className="flex items-start justify-between mb-3">
                     <div>
                       <h3
-                        className="font-display text-2xl font-light text-foreground mb-1"
-                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                        className="text-foreground mb-1"
+                        style={{
+                          fontFamily: "'Nunito Sans', sans-serif",
+                          fontStretch: "expanded",
+                          fontWeight: 800,
+                          fontSize: "1.1rem",
+                          letterSpacing: "0.08em",
+                          textTransform: "uppercase",
+                        }}
                       >
                         {service.name}
                       </h3>

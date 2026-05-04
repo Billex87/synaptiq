@@ -23,7 +23,7 @@ const tiers = [
     ],
     cta: "Book a Session",
     featured: false,
-    accent: "oklch(0.72 0.12 192)", // cold teal
+    accent: "#8D745D", // cold teal
     badge: null,
   },
   {
@@ -42,7 +42,7 @@ const tiers = [
     ],
     cta: "Join Monthly",
     featured: false,
-    accent: "oklch(0.72 0.12 55)", // amber
+    accent: "#8D5027", // amber
     badge: null,
   },
   {
@@ -94,14 +94,21 @@ export default function PricingSection() {
             <div className="h-px w-12 bg-gold opacity-40" />
           </div>
           <h2
-            className="fade-up font-display text-5xl md:text-6xl lg:text-7xl font-light text-foreground leading-[1.05]"
-            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            className="fade-up"
+            style={{
+              fontFamily: "'Nunito Sans', sans-serif",
+              fontStretch: "expanded",
+              fontWeight: 800,
+              fontSize: "clamp(2.2rem, 5vw, 4rem)",
+              lineHeight: "1.05",
+              letterSpacing: "0.03em",
+              textTransform: "uppercase",
+              color: "#ffffff",
+            }}
           >
-            Invest in
+            INVEST IN
             <br />
-            <em className="italic" style={{ color: "oklch(0.75 0.12 85)" }}>
-              Your Recovery.
-            </em>
+            <span style={{ color: "#8D745D" }}>YOUR RECOVERY.</span>
           </h2>
           <p
             className="fade-up mt-6 font-body text-base text-muted-foreground leading-relaxed max-w-xl"
@@ -153,8 +160,16 @@ export default function PricingSection() {
                 {/* Tier name */}
                 <div className="mb-6">
                   <h3
-                    className="font-display text-2xl font-light text-foreground mb-1"
-                    style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                    style={{
+                      fontFamily: "'Nunito Sans', sans-serif",
+                      fontStretch: "expanded",
+                      fontWeight: 800,
+                      fontSize: "1rem",
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      color: "#ffffff",
+                      marginBottom: "4px",
+                    }}
                   >
                     {tier.name}
                   </h3>
@@ -170,10 +185,13 @@ export default function PricingSection() {
                 <div className="mb-6 pb-6 border-b border-foreground/10">
                   <div className="flex items-end gap-2">
                     <span
-                      className="font-display text-5xl font-light"
                       style={{
-                        fontFamily: "'Cormorant Garamond', serif",
+                        fontFamily: "'Nunito Sans', sans-serif",
+                        fontStretch: "expanded",
+                        fontWeight: 900,
+                        fontSize: "3rem",
                         color: tier.accent,
+                        letterSpacing: "0.02em",
                       }}
                     >
                       {tier.price}

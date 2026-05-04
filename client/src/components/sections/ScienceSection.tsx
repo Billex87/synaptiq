@@ -13,28 +13,28 @@ const protocols = [
     title: "The Contrast Protocol",
     description:
       "Alternating between heat and cold creates a vascular pump effect — dilating and constricting blood vessels to flush metabolic waste and deliver oxygen-rich blood to recovering tissue.",
-    color: "oklch(0.72 0.12 192)",
+    color: "#8D745D",
   },
   {
     step: "02",
     title: "Nervous System Reset",
     description:
       "Chronic stress keeps the body in a constant 'on' state. Intentional cold exposure activates the parasympathetic nervous system, bringing your body back into balance and out of the recovery gap.",
-    color: "oklch(0.72 0.12 55)",
+    color: "#8D5027",
   },
   {
     step: "03",
     title: "Cellular Photobiomodulation",
     description:
       "Red and near-infrared light at specific wavelengths (660nm–850nm) stimulate mitochondrial cytochrome c oxidase, boosting ATP production and accelerating cellular repair.",
-    color: "oklch(0.65 0.22 25)",
+    color: "#9C530D",
   },
   {
     step: "04",
     title: "Lymphatic Clearance",
     description:
       "Sequential pneumatic compression mimics the natural muscle pump, accelerating lymphatic drainage to reduce inflammation, clear metabolic byproducts, and restore tissue homeostasis.",
-    color: "oklch(0.72 0.12 192)",
+    color: "#8D745D",
   },
 ];
 
@@ -73,12 +73,20 @@ export default function ScienceSection() {
             <div className="h-px w-12 bg-gold opacity-40" />
           </div>
           <h2
-            className="fade-up font-display text-5xl md:text-6xl lg:text-7xl font-light text-foreground leading-[1.05]"
-            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            className="fade-up text-foreground"
+            style={{
+              fontFamily: "'Nunito Sans', sans-serif",
+              fontStretch: "expanded",
+              fontWeight: 800,
+              fontSize: "clamp(2.2rem, 5vw, 4rem)",
+              lineHeight: "1.05",
+              letterSpacing: "0.03em",
+              textTransform: "uppercase",
+            }}
           >
-            Recovery Isn't Rest.
+            RECOVERY ISN'T REST.
             <br />
-            <em className="italic text-muted-foreground">It's a Protocol.</em>
+            <span style={{ color: "#8D745D" }}>IT'S A PROTOCOL.</span>
           </h2>
         </div>
 
@@ -91,14 +99,30 @@ export default function ScienceSection() {
               style={{ transitionDelay: `${idx * 100}ms` }}
             >
               <div
-                className="font-display text-6xl font-light mb-4 opacity-15"
-                style={{ fontFamily: "'Cormorant Garamond', serif", color: p.color }}
+                style={{
+                  fontFamily: "'Nunito Sans', sans-serif",
+                  fontStretch: "expanded",
+                  fontWeight: 900,
+                  fontSize: "3.5rem",
+                  color: p.color,
+                  opacity: 0.15,
+                  marginBottom: "16px",
+                  letterSpacing: "0.05em",
+                }}
               >
                 {p.step}
               </div>
               <h3
-                className="font-display text-2xl font-light text-foreground mb-4"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                style={{
+                  fontFamily: "'Nunito Sans', sans-serif",
+                  fontStretch: "expanded",
+                  fontWeight: 800,
+                  fontSize: "1rem",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  color: "#ffffff",
+                  marginBottom: "16px",
+                }}
               >
                 {p.title}
               </h3>
@@ -127,8 +151,15 @@ export default function ScienceSection() {
               style={{ transitionDelay: `${idx * 100}ms` }}
             >
               <div
-                className="font-display text-4xl md:text-5xl font-light text-gold mb-3"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                style={{
+                  fontFamily: "'Nunito Sans', sans-serif",
+                  fontStretch: "expanded",
+                  fontWeight: 900,
+                  fontSize: "clamp(2rem, 4vw, 3rem)",
+                  color: "#8D745D",
+                  letterSpacing: "0.05em",
+                  marginBottom: "12px",
+                }}
               >
                 {stat.value}
               </div>
@@ -160,12 +191,21 @@ export default function ScienceSection() {
             {/* Copy */}
             <div>
               <h3
-                className="font-display text-3xl md:text-4xl font-light text-foreground leading-[1.1] mb-4"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                style={{
+                  fontFamily: "'Nunito Sans', sans-serif",
+                  fontStretch: "expanded",
+                  fontWeight: 800,
+                  fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
+                  lineHeight: "1.1",
+                  letterSpacing: "0.03em",
+                  textTransform: "uppercase",
+                  color: "#ffffff",
+                  marginBottom: "16px",
+                }}
               >
-                The Science Behind
+                THE SCIENCE BEHIND
                 <br />
-                <em className="italic text-cold">Cold Exposure.</em>
+                <span style={{ color: "#8D745D" }}>COLD EXPOSURE.</span>
               </h3>
               <p
                 className="font-body text-sm text-muted-foreground leading-relaxed mb-6"
@@ -180,7 +220,7 @@ export default function ScienceSection() {
               <div className="flex items-center gap-3">
                 <div
                   className="w-1 h-8"
-                  style={{ background: "oklch(0.72 0.12 192)" }}
+                  style={{ background: "#8D745D" }}
                 />
                 <p
                   className="font-body text-xs text-muted-foreground"

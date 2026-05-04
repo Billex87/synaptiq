@@ -83,12 +83,22 @@ export default function CTASection() {
 
           {/* Headline */}
           <h2
-            className="fade-up font-display text-5xl md:text-6xl lg:text-7xl font-light text-foreground leading-[1.05] mb-6"
-            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            className="fade-up"
+            style={{
+              fontFamily: "'Nunito Sans', sans-serif",
+              fontStretch: "expanded",
+              fontWeight: 900,
+              fontSize: "clamp(2.5rem, 7vw, 5.5rem)",
+              lineHeight: "0.95",
+              letterSpacing: "0.03em",
+              textTransform: "uppercase",
+              color: "#ffffff",
+              marginBottom: "24px",
+            }}
           >
-            Be First
+            BE FIRST
             <br />
-            <em className="italic text-cold">Through the Door.</em>
+            <span style={{ color: "#8D745D" }}>THROUGH THE DOOR.</span>
           </h2>
 
           <p

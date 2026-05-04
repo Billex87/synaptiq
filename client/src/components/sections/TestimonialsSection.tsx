@@ -12,7 +12,7 @@ const testimonials = [
     name: "Marcus T.",
     role: "Strength Athlete",
     initial: "M",
-    color: "oklch(0.72 0.12 192)",
+    color: "#8D745D",
   },
   {
     quote:
@@ -20,7 +20,7 @@ const testimonials = [
     name: "Sarah K.",
     role: "CrossFit Coach",
     initial: "S",
-    color: "oklch(0.65 0.22 25)",
+    color: "#9C530D",
   },
   {
     quote:
@@ -28,7 +28,7 @@ const testimonials = [
     name: "James R.",
     role: "Healthcare Professional",
     initial: "J",
-    color: "oklch(0.72 0.12 55)",
+    color: "#8D5027",
   },
 ];
 
@@ -69,10 +69,19 @@ export default function TestimonialsSection() {
             <div className="h-px w-12 bg-gold opacity-40" />
           </div>
           <h2
-            className="fade-up font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground"
-            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            className="fade-up"
+            style={{
+              fontFamily: "'Nunito Sans', sans-serif",
+              fontStretch: "expanded",
+              fontWeight: 800,
+              fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
+              lineHeight: "1.05",
+              letterSpacing: "0.03em",
+              textTransform: "uppercase",
+              color: "#ffffff",
+            }}
           >
-            Results They Can <em className="italic text-cold">Feel.</em>
+            RESULTS THEY CAN <span style={{ color: "#8D745D" }}>FEEL.</span>
           </h2>
         </div>
 
@@ -89,8 +98,16 @@ export default function TestimonialsSection() {
             >
               {/* Quote mark */}
               <div
-                className="font-display text-7xl font-light leading-none mb-4 opacity-20"
-                style={{ fontFamily: "'Cormorant Garamond', serif", color: t.color }}
+                style={{
+                  fontFamily: "'Nunito Sans', sans-serif",
+                  fontStretch: "expanded",
+                  fontWeight: 900,
+                  fontSize: "5rem",
+                  lineHeight: 1,
+                  marginBottom: "16px",
+                  opacity: 0.2,
+                  color: t.color,
+                }}
               >
                 "
               </div>
@@ -105,12 +122,12 @@ export default function TestimonialsSection() {
               {/* Author */}
               <div className="flex items-center gap-4">
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center font-display text-lg font-light"
+                  className="w-10 h-10 rounded-full flex items-center justify-center"
                   style={{
                     background: `${t.color}20`,
                     border: `1px solid ${t.color}40`,
                     color: t.color,
-                    fontFamily: "'Cormorant Garamond', serif",
+                    fontFamily: "'Nunito Sans', sans-serif",
                   }}
                 >
                   {t.initial}

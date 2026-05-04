@@ -1,8 +1,8 @@
 /* ============================================================
-   SYNAPTIQ BIOCORP — "Dark Sanctum" Design System
-   Design Movement: Dark Luxury Minimalism × Biophilic Noir
-   Colors: Near-black base, teal (cold), amber (heat), crimson (light)
-   Typography: Cormorant Garamond (display) + DM Sans (body)
+   SYNAPTIQ BIOCORP — Official Brand System
+   Design Movement: Dark Luxury × Biohacking Performance
+   Colors (Official): Mined #8D745D | Amber #8D5027 | Infrared #9C530D | Plunge #444240 | Coal #000000
+   Typography: Nunito Sans Expanded (titles, ALL CAPS) + DM Sans (body, Avenir Light sub)
    ============================================================ */
 
 @import "tailwindcss";
@@ -48,49 +48,50 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Synaptiq Brand Tokens */
-  --color-cold: oklch(0.72 0.12 192);
-  --color-heat: oklch(0.72 0.12 55);
-  --color-light-therapy: oklch(0.55 0.22 25);
-  --color-gold: oklch(0.72 0.08 75);
-  --color-surface: oklch(0.12 0.005 240);
-  --color-surface-2: oklch(0.16 0.006 240);
+  /* Synaptiq Official Brand Tokens */
+  --color-mined: oklch(0.54 0.05 55);       /* #8D745D — warm tan/bronze */
+  --color-amber: oklch(0.45 0.10 44);       /* #8D5027 — deep amber */
+  --color-infrared: oklch(0.46 0.13 40);    /* #9C530D — dark orange/rust */
+  --color-plunge: oklch(0.32 0.005 240);    /* #444240 — dark charcoal */
+  --color-coal: oklch(0.05 0 0);            /* #000000 — pure black */
+  --color-surface: oklch(0.10 0.003 240);
+  --color-surface-2: oklch(0.14 0.004 240);
 }
 
 :root {
-  --radius: 0.2rem;
-  --background: oklch(0.08 0.005 240);
-  --foreground: oklch(0.94 0.005 75);
-  --card: oklch(0.12 0.005 240);
-  --card-foreground: oklch(0.94 0.005 75);
-  --popover: oklch(0.12 0.005 240);
-  --popover-foreground: oklch(0.94 0.005 75);
-  --primary: oklch(0.72 0.12 192);
-  --primary-foreground: oklch(0.08 0.005 240);
-  --secondary: oklch(0.16 0.006 240);
-  --secondary-foreground: oklch(0.85 0.005 75);
-  --muted: oklch(0.18 0.006 240);
-  --muted-foreground: oklch(0.52 0.01 240);
-  --accent: oklch(0.72 0.08 75);
-  --accent-foreground: oklch(0.08 0.005 240);
-  --destructive: oklch(0.55 0.22 25);
-  --destructive-foreground: oklch(0.94 0.005 75);
-  --border: oklch(1 0 0 / 7%);
+  --radius: 0.15rem;
+  --background: oklch(0.06 0.003 240);          /* near-black, Coal-adjacent */
+  --foreground: oklch(0.93 0.008 65);            /* warm off-white */
+  --card: oklch(0.10 0.003 240);
+  --card-foreground: oklch(0.93 0.008 65);
+  --popover: oklch(0.10 0.003 240);
+  --popover-foreground: oklch(0.93 0.008 65);
+  --primary: oklch(0.54 0.05 55);               /* Mined — brand primary */
+  --primary-foreground: oklch(0.06 0.003 240);
+  --secondary: oklch(0.14 0.004 240);
+  --secondary-foreground: oklch(0.85 0.008 65);
+  --muted: oklch(0.16 0.004 240);
+  --muted-foreground: oklch(0.48 0.01 240);
+  --accent: oklch(0.45 0.10 44);               /* Amber */
+  --accent-foreground: oklch(0.93 0.008 65);
+  --destructive: oklch(0.46 0.13 40);           /* Infrared */
+  --destructive-foreground: oklch(0.93 0.008 65);
+  --border: oklch(1 0 0 / 8%);
   --input: oklch(1 0 0 / 10%);
-  --ring: oklch(0.72 0.12 192);
-  --chart-1: oklch(0.72 0.12 192);
-  --chart-2: oklch(0.72 0.12 55);
-  --chart-3: oklch(0.55 0.22 25);
-  --chart-4: oklch(0.72 0.08 75);
-  --chart-5: oklch(0.55 0.01 240);
-  --sidebar: oklch(0.10 0.005 240);
-  --sidebar-foreground: oklch(0.94 0.005 75);
-  --sidebar-primary: oklch(0.72 0.12 192);
-  --sidebar-primary-foreground: oklch(0.08 0.005 240);
-  --sidebar-accent: oklch(0.16 0.006 240);
-  --sidebar-accent-foreground: oklch(0.94 0.005 75);
-  --sidebar-border: oklch(1 0 0 / 7%);
-  --sidebar-ring: oklch(0.72 0.12 192);
+  --ring: oklch(0.54 0.05 55);
+  --chart-1: oklch(0.54 0.05 55);
+  --chart-2: oklch(0.45 0.10 44);
+  --chart-3: oklch(0.46 0.13 40);
+  --chart-4: oklch(0.32 0.005 240);
+  --chart-5: oklch(0.20 0.003 240);
+  --sidebar: oklch(0.08 0.003 240);
+  --sidebar-foreground: oklch(0.93 0.008 65);
+  --sidebar-primary: oklch(0.54 0.05 55);
+  --sidebar-primary-foreground: oklch(0.06 0.003 240);
+  --sidebar-accent: oklch(0.14 0.004 240);
+  --sidebar-accent-foreground: oklch(0.93 0.008 65);
+  --sidebar-border: oklch(1 0 0 / 8%);
+  --sidebar-ring: oklch(0.54 0.05 55);
 }
 
 @layer base {
@@ -103,6 +104,7 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -119,28 +121,33 @@
     @apply cursor-pointer;
   }
 
-  h1, h2, h3 {
-    font-family: 'Cormorant Garamond', serif;
+  /* Brand typography — Nunito Sans Expanded for all headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-stretch: expanded;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
 
   ::selection {
-    background: oklch(0.72 0.12 192 / 30%);
-    color: oklch(0.94 0.005 75);
+    background: oklch(0.54 0.05 55 / 35%);
+    color: oklch(0.93 0.008 65);
   }
 
   /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 4px;
+    width: 3px;
   }
   ::-webkit-scrollbar-track {
-    background: oklch(0.08 0.005 240);
+    background: oklch(0.06 0.003 240);
   }
   ::-webkit-scrollbar-thumb {
-    background: oklch(0.72 0.08 75 / 40%);
+    background: oklch(0.54 0.05 55 / 50%);
     border-radius: 2px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: oklch(0.72 0.08 75 / 70%);
+    background: oklch(0.54 0.05 55 / 80%);
   }
 }
 
@@ -173,62 +180,79 @@
     }
   }
 
-  /* Synaptiq utility classes */
+  /* Brand font utilities */
   .font-display {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Nunito Sans', sans-serif;
+    font-stretch: expanded;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
 
   .font-body {
     font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
   }
 
-  .text-cold {
-    color: oklch(0.72 0.12 192);
+  /* Brand color utilities */
+  .text-mined {
+    color: #8D745D;
   }
 
-  .text-heat {
-    color: oklch(0.72 0.12 55);
+  .text-amber-brand {
+    color: #8D5027;
   }
 
-  .text-light-therapy {
-    color: oklch(0.65 0.22 25);
+  .text-infrared {
+    color: #9C530D;
   }
 
-  .text-gold {
-    color: oklch(0.72 0.08 75);
+  .text-plunge {
+    color: #444240;
   }
 
   .bg-surface {
-    background-color: oklch(0.12 0.005 240);
+    background-color: oklch(0.10 0.003 240);
   }
 
   .bg-surface-2 {
-    background-color: oklch(0.16 0.006 240);
+    background-color: oklch(0.14 0.004 240);
   }
 
-  .border-gold {
-    border-color: oklch(0.72 0.08 75 / 40%);
+  .border-mined {
+    border-color: #8D745D;
   }
 
-  .glow-cold {
-    box-shadow: 0 0 60px oklch(0.72 0.12 192 / 15%);
+  /* Glow effects using brand colors */
+  .glow-mined {
+    box-shadow: 0 0 60px oklch(0.54 0.05 55 / 20%);
   }
 
-  .glow-heat {
-    box-shadow: 0 0 60px oklch(0.72 0.12 55 / 15%);
+  .glow-amber {
+    box-shadow: 0 0 60px oklch(0.45 0.10 44 / 20%);
   }
 
-  .glow-light {
-    box-shadow: 0 0 60px oklch(0.55 0.22 25 / 15%);
+  .glow-infrared {
+    box-shadow: 0 0 60px oklch(0.46 0.13 40 / 20%);
   }
+
+  /* Legacy aliases for existing components */
+  .text-gold { color: #8D745D; }
+  .text-cold { color: #8D745D; }
+  .text-heat { color: #8D5027; }
+  .text-light-therapy { color: #9C530D; }
+  .glow-cold { box-shadow: 0 0 60px oklch(0.54 0.05 55 / 15%); }
+  .glow-heat { box-shadow: 0 0 60px oklch(0.45 0.10 44 / 15%); }
+  .glow-light { box-shadow: 0 0 60px oklch(0.46 0.13 40 / 15%); }
+  .border-gold { border-color: oklch(0.54 0.05 55 / 40%); }
 
   .gold-rule {
     height: 1px;
-    background: linear-gradient(90deg, transparent, oklch(0.72 0.08 75 / 50%), transparent);
+    background: linear-gradient(90deg, transparent, #8D745D80, transparent);
   }
 
   .glass-nav {
-    background: oklch(0.08 0.005 240 / 88%);
+    background: oklch(0.06 0.003 240 / 90%);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border-bottom: 1px solid oklch(1 0 0 / 5%);
@@ -256,7 +280,7 @@
     opacity: 1;
   }
 
-  /* Hover glow on service cards */
+  /* Hover lift on service cards */
   .service-card-hover {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
   }

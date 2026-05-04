@@ -59,8 +59,15 @@ export default function AboutSection() {
               style={{ background: "oklch(0.16 0.006 240)" }}
             >
               <div
-                className="font-display text-4xl font-light text-cold mb-1"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                style={{
+                  fontFamily: "'Nunito Sans', sans-serif",
+                  fontStretch: "expanded",
+                  fontWeight: 900,
+                  fontSize: "2.5rem",
+                  color: "#8D745D",
+                  lineHeight: 1,
+                  marginBottom: "4px",
+                }}
               >
                 4
               </div>
@@ -88,12 +95,20 @@ export default function AboutSection() {
             </div>
 
             <h2
-              className="fade-up font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground leading-[1.1]"
-              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              className="fade-up text-foreground"
+              style={{
+                fontFamily: "'Nunito Sans', sans-serif",
+                fontStretch: "expanded",
+                fontWeight: 800,
+                fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
+                lineHeight: "1.05",
+                letterSpacing: "0.03em",
+                textTransform: "uppercase",
+              }}
             >
-              Where Science
+              WHERE SCIENCE
               <br />
-              Meets <em className="italic text-cold">Stillness.</em>
+              <span style={{ color: "#8D745D" }}>MEETS STILLNESS.</span>
             </h2>
 
             <p
@@ -130,8 +145,14 @@ export default function AboutSection() {
               ].map((stat) => (
                 <div key={stat.label} className="border-l border-gold/30 pl-4">
                   <div
-                    className="font-display text-2xl font-light text-gold"
-                    style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                    style={{
+                      fontFamily: "'Nunito Sans', sans-serif",
+                      fontStretch: "expanded",
+                      fontWeight: 800,
+                      fontSize: "1.4rem",
+                      color: "#8D745D",
+                      letterSpacing: "0.05em",
+                    }}
                   >
                     {stat.value}
                   </div>

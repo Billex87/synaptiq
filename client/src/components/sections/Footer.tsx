@@ -1,9 +1,33 @@
 /* ============================================================
-   SYNAPTIQ — Footer
-   Design: Minimal dark footer with brand identity
+   SYNAPTIQ BIOCORP — Footer
+   Brand: Nunito Sans Expanded (ALL CAPS) + DM Sans (body)
+   Logo: Real neural wave mark in #8D745D (Mined)
    ============================================================ */
 
 import { Instagram, MapPin } from "lucide-react";
+
+function SynaptiqMark({ size = 44, color = "#8D745D" }: { size?: number; color?: string }) {
+  return (
+    <svg
+      viewBox="0 0 80 52"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ height: size, width: "auto" }}
+    >
+      <rect x="1.5" y="1.5" width="77" height="49" rx="1.5" stroke={color} strokeWidth="2" fill="none" />
+      <circle cx="8" cy="26" r="2.5" fill={color} />
+      <circle cx="72" cy="26" r="2.5" fill={color} />
+      <path
+        d="M10.5 26 C16 26 16 12 22 12 C28 12 28 40 34 40 C40 40 40 12 46 12 C52 12 52 40 58 40 C64 40 64 26 69.5 26"
+        stroke={color}
+        strokeWidth="2.2"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,7 +36,7 @@ export default function Footer() {
     <footer
       className="py-16 border-t"
       style={{
-        background: "oklch(0.07 0.004 240)",
+        background: "oklch(0.05 0.002 240)",
         borderColor: "oklch(1 0 0 / 6%)",
       }}
     >
@@ -20,34 +44,49 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="mb-4 flex items-center gap-3">
-              {/* Geometric mark */}
-              <svg viewBox="0 0 56 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-10 w-auto">
-                <rect x="1" y="1" width="54" height="34" rx="1" stroke="white" strokeWidth="1.8" fill="none"/>
-                <polyline points="4,33 18,5 32,33" stroke="white" strokeWidth="1.8" fill="none" strokeLinejoin="round"/>
-                <polyline points="24,33 38,5 52,33" stroke="white" strokeWidth="1.8" fill="none" strokeLinejoin="round"/>
-              </svg>
-              {/* Wordmark */}
+            <div className="mb-5 flex items-center gap-3">
+              <SynaptiqMark size={44} color="#8D745D" />
               <div className="flex flex-col leading-none">
                 <div
-                  className="text-foreground text-[13px] tracking-[0.3em] uppercase font-light"
-                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                  style={{
+                    fontFamily: "'Nunito Sans', sans-serif",
+                    fontStretch: "expanded",
+                    fontWeight: 800,
+                    fontSize: "14px",
+                    letterSpacing: "0.28em",
+                    textTransform: "uppercase",
+                    color: "#ffffff",
+                  }}
                 >
                   SYNAPTIQ
                 </div>
                 <div
-                  className="text-gold text-[8px] tracking-[0.35em] uppercase font-light mt-0.5"
-                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                  style={{
+                    fontFamily: "'Nunito Sans', sans-serif",
+                    fontStretch: "expanded",
+                    fontWeight: 400,
+                    fontSize: "8px",
+                    letterSpacing: "0.32em",
+                    textTransform: "uppercase",
+                    color: "#8D745D",
+                    marginTop: "4px",
+                  }}
                 >
                   BIO CORP
                 </div>
               </div>
             </div>
             <p
-              className="font-body text-sm text-muted-foreground leading-relaxed max-w-xs"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 300,
+                fontSize: "13px",
+                color: "oklch(0.48 0.01 240)",
+                lineHeight: "1.7",
+                maxWidth: "260px",
+              }}
             >
-              Contrast therapy for performance &amp; longevity.
+              Contrast therapy for performance + longevity.
               Science-backed recovery — Fort St. John, BC.
             </p>
           </div>
@@ -55,44 +94,68 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4
-              className="font-body text-[10px] tracking-[0.3em] uppercase text-gold mb-5"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              style={{
+                fontFamily: "'Nunito Sans', sans-serif",
+                fontStretch: "expanded",
+                fontWeight: 700,
+                fontSize: "9px",
+                letterSpacing: "0.3em",
+                textTransform: "uppercase",
+                color: "#8D745D",
+                marginBottom: "20px",
+              }}
             >
               Services
             </h4>
             <ul className="space-y-3">
-              {["Cold Plunge", "Dry Sauna", "Red Light Therapy", "Compression Recovery"].map(
-                (s) => (
-                  <li key={s}>
-                    <span
-                      className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-default"
-                      style={{ fontFamily: "'DM Sans', sans-serif" }}
-                    >
-                      {s}
-                    </span>
-                  </li>
-                )
-              )}
+              {["Cold Plunge", "Dry Sauna", "Red Light Therapy", "Compression Recovery"].map((s) => (
+                <li key={s}>
+                  <span
+                    style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontWeight: 300,
+                      fontSize: "13px",
+                      color: "oklch(0.48 0.01 240)",
+                      cursor: "default",
+                    }}
+                  >
+                    {s}
+                  </span>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Location & Social */}
           <div>
             <h4
-              className="font-body text-[10px] tracking-[0.3em] uppercase text-gold mb-5"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              style={{
+                fontFamily: "'Nunito Sans', sans-serif",
+                fontStretch: "expanded",
+                fontWeight: 700,
+                fontSize: "9px",
+                letterSpacing: "0.3em",
+                textTransform: "uppercase",
+                color: "#8D745D",
+                marginBottom: "20px",
+              }}
             >
               Find Us
             </h4>
             <div className="flex items-start gap-3 mb-6">
-              <MapPin size={14} className="text-muted-foreground mt-0.5 shrink-0" />
+              <MapPin size={14} style={{ color: "oklch(0.48 0.01 240)", marginTop: "2px", flexShrink: 0 }} />
               <p
-                className="font-body text-sm text-muted-foreground leading-relaxed"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontWeight: 300,
+                  fontSize: "13px",
+                  color: "oklch(0.48 0.01 240)",
+                  lineHeight: "1.7",
+                }}
               >
                 Fort St. John, BC
                 <br />
-                <span className="text-cold">Opening Soon</span>
+                <span style={{ color: "#8D745D" }}>Opening Soon</span>
               </p>
             </div>
 
@@ -100,12 +163,18 @@ export default function Footer() {
               href="https://www.instagram.com/synaptiqbiocorp"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors duration-200 group"
+              className="inline-flex items-center gap-3 group"
+              style={{ color: "oklch(0.48 0.01 240)", transition: "color 0.2s" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "oklch(0.48 0.01 240)")}
             >
-              <Instagram size={16} />
+              <Instagram size={15} />
               <span
-                className="font-body text-sm"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontWeight: 300,
+                  fontSize: "13px",
+                }}
               >
                 @synaptiqbiocorp
               </span>
@@ -117,16 +186,28 @@ export default function Footer() {
         <div className="gold-rule mb-8" />
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p
-            className="font-body text-xs text-muted-foreground"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 300,
+              fontSize: "11px",
+              color: "oklch(0.38 0.008 240)",
+              letterSpacing: "0.05em",
+            }}
           >
             © {currentYear} Synaptiq BioCorp. All rights reserved.
           </p>
           <p
-            className="font-body text-xs text-muted-foreground tracking-[0.1em]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            style={{
+              fontFamily: "'Nunito Sans', sans-serif",
+              fontStretch: "expanded",
+              fontWeight: 600,
+              fontSize: "9px",
+              letterSpacing: "0.25em",
+              textTransform: "uppercase",
+              color: "#8D745D",
+            }}
           >
-            Recover with purpose.
+            Recover With Purpose.
           </p>
         </div>
       </div>

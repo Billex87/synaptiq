@@ -77,17 +77,24 @@ export default function HeroSection() {
 
         {/* Main headline */}
         <h1
-          className={`font-display text-6xl md:text-8xl lg:text-[7rem] xl:text-[9rem] font-light leading-[0.92] tracking-tight text-foreground mb-8 transition-all duration-1000 ${
+          className={`transition-all duration-1000 mb-8 ${
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
           style={{
-            fontFamily: "'Cormorant Garamond', serif",
+            fontFamily: "'Nunito Sans', sans-serif",
+            fontStretch: "expanded",
+            fontWeight: 900,
+            fontSize: "clamp(3.5rem, 10vw, 8rem)",
+            lineHeight: "0.95",
+            letterSpacing: "0.03em",
+            textTransform: "uppercase",
+            color: "#ffffff",
             transitionDelay: "400ms",
           }}
         >
-          Recover
+          RECOVER
           <br />
-          <em className="italic text-cold">With Purpose.</em>
+          <span style={{ color: "#8D745D" }}>WITH PURPOSE.</span>
         </h1>
 
         {/* Subheadline */}
@@ -100,9 +107,9 @@ export default function HeroSection() {
             transitionDelay: "600ms",
           }}
         >
-          Contrast therapy for performance &amp; longevity.
+          Contrast therapy for performance + longevity.
           <br />
-          Science-backed recovery — Cold Plunge, Sauna, Red Light &amp; More.
+          Science-backed recovery — Cold Plunge, Sauna, Red Light + More.
         </p>
 
         {/* CTA buttons */}
@@ -114,15 +121,15 @@ export default function HeroSection() {
         >
           <button
             onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
-            className="font-body text-sm tracking-[0.15em] uppercase px-10 py-4 bg-cold text-background font-medium hover:bg-opacity-90 transition-all duration-300"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="font-body text-sm tracking-[0.15em] uppercase px-10 py-4 text-black font-medium transition-all duration-300"
+            style={{ background: "#8D745D", fontFamily: "'DM Sans', sans-serif" }}
           >
             Join the Waitlist
           </button>
           <button
             onClick={scrollToServices}
-            className="font-body text-sm tracking-[0.15em] uppercase px-10 py-4 border border-foreground/30 text-foreground hover:border-gold hover:text-gold transition-all duration-300"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="font-body text-sm tracking-[0.15em] uppercase px-10 py-4 border text-foreground transition-all duration-300"
+            style={{ borderColor: "rgba(255,255,255,0.3)", fontFamily: "'DM Sans', sans-serif" }}
           >
             Explore Services
           </button>
