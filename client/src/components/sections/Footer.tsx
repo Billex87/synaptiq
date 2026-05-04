@@ -7,10 +7,10 @@
 import { Instagram, MapPin } from "lucide-react";
 
 /* Full stacked logo PNG for footer */
-function SynaptiqMark({ size = 80 }: { size?: number; color?: string }) {
+function SynaptiqMark({ size = 80 }: { size?: number }) {
   return (
     <img
-      src="/images/logo-gold.png"
+      src="/images/logo-stacked.png"
       alt="SynaptIQ BioCorp"
       style={{ height: size, width: "auto", objectFit: "contain" }}
     />
