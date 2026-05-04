@@ -71,7 +71,7 @@
   --secondary: oklch(0.14 0.004 240);
   --secondary-foreground: oklch(0.85 0.008 65);
   --muted: oklch(0.16 0.004 240);
-  --muted-foreground: oklch(0.48 0.01 240);
+  --muted-foreground: oklch(0.93 0.008 65);
   --accent: oklch(0.45 0.10 44);               /* Amber */
   --accent-foreground: oklch(0.93 0.008 65);
   --destructive: oklch(0.46 0.13 40);           /* Infrared */

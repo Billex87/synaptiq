@@ -103,11 +103,11 @@ export default function Navbar() {
                   fontSize: "13px",
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
-                  color: "oklch(0.55 0.01 240)",
+                  color: "#ffffff",
                   transition: "color 0.3s",
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "oklch(0.55 0.01 240)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#ffffff")}
               >
                 {link.label}
               </button>

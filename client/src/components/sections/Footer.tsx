@@ -74,7 +74,7 @@ export default function Footer() {
                       fontFamily: "'DM Sans', sans-serif",
                       fontWeight: 300,
                       fontSize: "13px",
-                      color: "oklch(0.48 0.01 240)",
+                      color: "#ffffff",
                       cursor: "default",
                     }}
                   >
@@ -102,13 +102,13 @@ export default function Footer() {
               Find Us
             </h4>
             <div className="flex items-start gap-3 mb-6">
-              <MapPin size={14} style={{ color: "oklch(0.48 0.01 240)", marginTop: "2px", flexShrink: 0 }} />
+              <MapPin size={14} style={{ color: "#ffffff", marginTop: "2px", flexShrink: 0 }} />
               <p
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 300,
                   fontSize: "13px",
-                  color: "oklch(0.48 0.01 240)",
+                  color: "#ffffff",
                   lineHeight: "1.7",
                 }}
               >
@@ -123,9 +123,9 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 group"
-              style={{ color: "oklch(0.48 0.01 240)", transition: "color 0.2s" }}
+              style={{ color: "#ffffff", transition: "color 0.2s" }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "oklch(0.48 0.01 240)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#ffffff")}
             >
               <Instagram size={15} />
               <span
@@ -149,7 +149,7 @@ export default function Footer() {
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 300,
               fontSize: "11px",
-              color: "oklch(0.38 0.008 240)",
+                  color: "#ffffff",
               letterSpacing: "0.05em",
             }}
           >
