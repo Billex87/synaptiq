@@ -27,14 +27,14 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section id="about" className="py-32 overflow-hidden" ref={sectionRef}>
+    <section id="about" className="py-20 lg:py-32 overflow-hidden" ref={sectionRef}>
       {/* Gold rule */}
-      <div className="container mb-20">
+      <div className="container mb-12 lg:mb-20">
         <div className="gold-rule" />
       </div>
 
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 items-center">
           {/* Image side */}
           <div className="fade-in relative">
             <div className="relative overflow-hidden rounded-sm">

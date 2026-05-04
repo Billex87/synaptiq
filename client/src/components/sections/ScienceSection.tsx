@@ -55,13 +55,13 @@ export default function ScienceSection() {
   return (
     <section
       id="science"
-      className="py-32"
+      className="py-20 lg:py-32"
       style={{ background: "oklch(0.10 0.005 240)" }}
       ref={sectionRef}
     >
       <div className="container">
         {/* Section header */}
-        <div className="mb-20 max-w-3xl">
+        <div className="mb-12 lg:mb-20 max-w-3xl">
           <div className="fade-up flex items-center gap-4 mb-6">
             <span
               className="text-gold text-[10px] tracking-[0.4em] uppercase font-body"
@@ -90,7 +90,7 @@ export default function ScienceSection() {
         </div>
 
         {/* Protocol steps */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border mb-12 lg:mb-20">
           {protocols.map((p, idx) => (
             <div
               key={p.step}

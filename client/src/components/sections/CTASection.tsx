@@ -48,7 +48,7 @@ export default function CTASection() {
   return (
     <section
       id="contact"
-      className="relative py-40 overflow-hidden"
+      className="relative py-24 lg:py-40 overflow-hidden"
       ref={sectionRef}
     >
       {/* Background image */}

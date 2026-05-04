@@ -54,10 +54,10 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <section className="py-32 bg-background" ref={sectionRef}>
+    <section className="py-20 lg:py-32 bg-background" ref={sectionRef}>
       <div className="container">
         {/* Section header */}
-        <div className="mb-16 text-center">
+        <div className="mb-10 lg:mb-16 text-center">
           <div className="fade-up flex items-center justify-center gap-4 mb-6">
             <div className="h-px w-12 bg-gold opacity-40" />
             <span

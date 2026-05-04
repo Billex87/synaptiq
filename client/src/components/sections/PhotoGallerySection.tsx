@@ -40,11 +40,11 @@ export default function PhotoGallerySection() {
 
   return (
     <section
-      className="py-24 overflow-hidden"
+      className="py-16 lg:py-24 overflow-hidden"
       ref={sectionRef}
       style={{ background: "oklch(0.06 0.003 240)" }}
     >
-      <div className="container mb-14">
+      <div className="container mb-8 lg:mb-14">
         <div className="gold-rule mb-12" />
         <div className="flex items-center justify-between">
           <div>
