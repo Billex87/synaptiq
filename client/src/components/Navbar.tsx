@@ -151,51 +151,66 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile menu overlay */}
-      <div
-        className={`fixed inset-0 z-40 flex flex-col items-center justify-center gap-10 transition-all duration-500 ${
-          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
-        style={{ background: "oklch(0.06 0.003 240 / 97%)", backdropFilter: "blur(24px)" }}
-      >
-        {navLinks.map((link) => (
-          <button
-            key={link.label}
-            onClick={() => handleNavClick(link.href)}
-            style={{
-              fontFamily: "'Nunito Sans', sans-serif",
-              fontStretch: "expanded",
-              fontWeight: 800,
-              fontSize: "22px",
-              letterSpacing: "0.2em",
-              textTransform: "uppercase",
-              color: "#ffffff",
-              transition: "color 0.3s",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "#8D745D")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "#ffffff")}
-          >
-            {link.label}
-          </button>
-        ))}
-        <button
-          onClick={() => handleNavClick("#contact")}
+      {/* Mobile dropdown menu */}
+      {mobileOpen && (
+        <div
+          className="fixed top-20 left-0 right-0 z-40 md:hidden"
           style={{
-            marginTop: "8px",
-            fontFamily: "'DM Sans', sans-serif",
-            fontWeight: 400,
-            fontSize: "11px",
-            letterSpacing: "0.2em",
-            textTransform: "uppercase",
-            color: "#8D745D",
-            border: "1px solid #8D745D",
-            padding: "14px 36px",
-            background: "transparent",
+            background: "oklch(0.06 0.003 240 / 97%)",
+            backdropFilter: "blur(24px)",
+            borderBottom: "1px solid rgba(141, 116, 93, 0.2)",
           }}
         >
-          Book Now
-        </button>
-      </div>
+          <div className="container flex flex-col gap-4 py-6">
+            {navLinks.map((link) => (
+              <button
+                key={link.label}
+                onClick={() => handleNavClick(link.href)}
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontWeight: 300,
+                  fontSize: "13px",
+                  letterSpacing: "0.18em",
+                  textTransform: "uppercase",
+                  color: "#ffffff",
+                  transition: "color 0.3s",
+                  textAlign: "left",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#8D745D")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#ffffff")}
+              >
+                {link.label}
+              </button>
+            ))}
+            <button
+              onClick={() => handleNavClick("#contact")}
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 400,
+                fontSize: "12px",
+                letterSpacing: "0.2em",
+                textTransform: "uppercase",
+                color: "#8D745D",
+                border: "1px solid #8D745D",
+                padding: "10px 20px",
+                background: "transparent",
+                transition: "all 0.3s",
+                alignSelf: "flex-start",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#8D745D";
+                e.currentTarget.style.color = "#000000";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "#8D745D";
+              }}
+            >
+              Book Now
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
