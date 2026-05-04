@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 90" fill="none">
+  <!-- Geometric mark: outer rectangle with inner diamond/chevron shape -->
+  <!-- Outer bounding rectangle -->
+  <rect x="72" y="4" width="56" height="36" rx="1" stroke="white" stroke-width="2" fill="none"/>
+  <!-- Inner diamond / chevron: two upward-pointing triangles side by side -->
+  <!-- Left chevron -->
+  <polyline points="76,34 88,14 100,34" stroke="white" stroke-width="2" fill="none" stroke-linejoin="round"/>
+  <!-- Right chevron -->
+  <polyline points="100,34 112,14 124,34" stroke="white" stroke-width="2" fill="none" stroke-linejoin="round"/>
+
+  <!-- SYNAPTIQ wordmark -->
+  <text
+    x="100"
+    y="60"
+    text-anchor="middle"
+    font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif"
+    font-size="13"
+    font-weight="400"
+    letter-spacing="5"
+    fill="white">SYNAPTIQ</text>
+
+  <!-- BIO CORP subtext -->
+  <text
+    x="100"
+    y="76"
+    text-anchor="middle"
+    font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif"
+    font-size="7.5"
+    font-weight="300"
+    letter-spacing="4"
+    fill="white">BIO CORP</text>
+</svg>

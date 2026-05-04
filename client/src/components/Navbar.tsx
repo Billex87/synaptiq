@@ -43,21 +43,30 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#"
-            className="flex flex-col leading-none"
+            className="flex items-center gap-3"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
           >
-            <span
-              className="font-display text-2xl font-light tracking-[0.15em] text-foreground"
-              style={{ fontFamily: "'Cormorant Garamond', serif" }}
-            >
-              SYNAPTIQ
-            </span>
-            <span
-              className="text-gold text-[9px] tracking-[0.35em] uppercase font-body font-light mt-0.5"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
-            >
-              BioCorp
-            </span>
+            {/* Geometric mark */}
+            <svg viewBox="0 0 56 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
+              <rect x="1" y="1" width="54" height="34" rx="1" stroke="white" strokeWidth="1.8" fill="none"/>
+              <polyline points="4,33 18,5 32,33" stroke="white" strokeWidth="1.8" fill="none" strokeLinejoin="round"/>
+              <polyline points="24,33 38,5 52,33" stroke="white" strokeWidth="1.8" fill="none" strokeLinejoin="round"/>
+            </svg>
+            {/* Wordmark */}
+            <div className="flex flex-col leading-none">
+              <span
+                className="text-foreground text-[13px] tracking-[0.3em] uppercase font-light"
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
+              >
+                SYNAPTIQ
+              </span>
+              <span
+                className="text-gold text-[8px] tracking-[0.35em] uppercase font-light mt-0.5"
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
+              >
+                BIO CORP
+              </span>
+            </div>
           </a>
 
           {/* Desktop nav */}

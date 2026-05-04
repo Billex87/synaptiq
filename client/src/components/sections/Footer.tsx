@@ -20,18 +20,27 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="mb-4">
-              <div
-                className="font-display text-2xl font-light tracking-[0.15em] text-foreground"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
-              >
-                SYNAPTIQ
-              </div>
-              <div
-                className="text-gold text-[9px] tracking-[0.35em] uppercase font-body mt-0.5"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
-              >
-                BioCorp
+            <div className="mb-4 flex items-center gap-3">
+              {/* Geometric mark */}
+              <svg viewBox="0 0 56 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-10 w-auto">
+                <rect x="1" y="1" width="54" height="34" rx="1" stroke="white" strokeWidth="1.8" fill="none"/>
+                <polyline points="4,33 18,5 32,33" stroke="white" strokeWidth="1.8" fill="none" strokeLinejoin="round"/>
+                <polyline points="24,33 38,5 52,33" stroke="white" strokeWidth="1.8" fill="none" strokeLinejoin="round"/>
+              </svg>
+              {/* Wordmark */}
+              <div className="flex flex-col leading-none">
+                <div
+                  className="text-foreground text-[13px] tracking-[0.3em] uppercase font-light"
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                >
+                  SYNAPTIQ
+                </div>
+                <div
+                  className="text-gold text-[8px] tracking-[0.35em] uppercase font-light mt-0.5"
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                >
+                  BIO CORP
+                </div>
               </div>
             </div>
             <p
