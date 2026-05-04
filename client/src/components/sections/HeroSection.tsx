@@ -70,7 +70,9 @@ export default function HeroSection() {
             className="text-gold text-[10px] tracking-[0.4em] uppercase font-body"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            Fort St. John, BC &nbsp;·&nbsp; Launching Soon
+            Fort St. John, BC
+            <br />
+            Launching Soon
           </span>
           <div className="h-px w-12 bg-gold opacity-60" />
         </div>
