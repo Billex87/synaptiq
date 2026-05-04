@@ -158,11 +158,6 @@ export default function Navbar() {
         }`}
         style={{ background: "oklch(0.06 0.003 240 / 97%)", backdropFilter: "blur(24px)" }}
       >
-        {/* Mobile logo */}
-        <div className="flex flex-col items-center gap-3 mb-4">
-          <SynaptiqMark size={52} />
-        </div>
-
         {navLinks.map((link) => (
           <button
             key={link.label}
