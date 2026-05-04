@@ -56,11 +56,11 @@ export default function Navbar() {
             className="flex items-center gap-3 group"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
           >
-            <SynaptiqMark size={36} />
+            <SynaptiqMark size={52} />
             <img
               src="/images/logo-wordmark.png"
               alt="SYNAPTIQ BIO CORP"
-              style={{ height: 28, width: "auto" }}
+              style={{ height: 40, width: "auto" }}
             />
           </a>
 
@@ -73,7 +73,7 @@ export default function Navbar() {
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 300,
-                  fontSize: "11px",
+                  fontSize: "13px",
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
                   color: "oklch(0.55 0.01 240)",
@@ -90,12 +90,12 @@ export default function Navbar() {
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 400,
-                fontSize: "10px",
+                fontSize: "12px",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
                 color: "#8D745D",
                 border: "1px solid #8D745D",
-                padding: "10px 22px",
+                padding: "12px 28px",
                 background: "transparent",
                 transition: "all 0.3s",
               }}
