@@ -57,11 +57,38 @@ export default function Navbar() {
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
           >
             <SynaptiqMark size={52} />
-            <img
-              src="/images/logo-wordmark.png"
-              alt="SYNAPTIQ BIO CORP"
-              style={{ height: 40, width: "auto" }}
-            />
+            <div className="flex flex-col leading-none">
+              <span
+                style={{
+                  fontFamily: "'Nunito Sans', sans-serif",
+                  fontStretch: "expanded",
+                  fontWeight: 800,
+                  fontSize: "14px",
+                  letterSpacing: "0.28em",
+                  textTransform: "uppercase",
+                  background: "linear-gradient(135deg, #8D745D 0%, #8D5027 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                SYNAPTIQ
+              </span>
+              <span
+                style={{
+                  fontFamily: "'Nunito Sans', sans-serif",
+                  fontStretch: "expanded",
+                  fontWeight: 400,
+                  fontSize: "9px",
+                  letterSpacing: "0.32em",
+                  textTransform: "uppercase",
+                  color: "#8D745D",
+                  marginTop: "2px",
+                }}
+              >
+                BIO CORP
+              </span>
+            </div>
           </a>
 
           {/* Desktop nav */}
