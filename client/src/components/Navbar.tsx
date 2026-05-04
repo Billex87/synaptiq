@@ -161,21 +161,21 @@ export default function Navbar() {
             borderBottom: "1px solid rgba(141, 116, 93, 0.2)",
           }}
         >
-          <div className="container flex flex-col gap-4 py-6">
+          <div className="container grid grid-cols-2 gap-6 py-6 place-items-center">
             {navLinks.map((link) => (
               <button
                 key={link.label}
                 onClick={() => handleNavClick(link.href)}
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 300,
-                  fontSize: "13px",
-                  letterSpacing: "0.18em",
-                  textTransform: "uppercase",
-                  color: "#ffffff",
-                  transition: "color 0.3s",
-                  textAlign: "left",
-                }}
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 300,
+                fontSize: "13px",
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: "#ffffff",
+                transition: "color 0.3s",
+                textAlign: "center",
+              }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#8D745D")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#ffffff")}
               >
@@ -195,7 +195,7 @@ export default function Navbar() {
                 padding: "10px 20px",
                 background: "transparent",
                 transition: "all 0.3s",
-                alignSelf: "flex-start",
+                gridColumn: "1 / -1",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = "#8D745D";
