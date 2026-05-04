@@ -29,27 +29,29 @@ export default function Footer() {
       }}
     >
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-8 lg:mb-10">
-          {/* Brand */}
-          <div>
-            <div className="mb-3">
-              <SynaptiqMark size={60} />
-            </div>
-            <p
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 300,
-                fontSize: "13px",
-                color: "oklch(0.48 0.01 240)",
-                lineHeight: "1.7",
-                maxWidth: "260px",
-              }}
-            >
-              Contrast therapy for performance + longevity.
-              Science-backed recovery — Fort St. John, BC.
-            </p>
+        {/* Brand section — centered at top */}
+        <div className="text-center mb-10 lg:mb-14">
+          <div className="flex justify-center mb-4">
+            <SynaptiqMark size={60} />
           </div>
+          <p
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 300,
+              fontSize: "13px",
+              color: "oklch(0.48 0.01 240)",
+              lineHeight: "1.7",
+              maxWidth: "400px",
+              margin: "0 auto",
+            }}
+          >
+            Contrast therapy for performance + longevity.
+            Science-backed recovery — Fort St. John, BC.
+          </p>
+        </div>
 
+        {/* Services and Find Us — side by side */}
+        <div className="grid grid-cols-2 gap-8 lg:gap-16 mb-8 lg:mb-10">
           {/* Services */}
           <div>
             <h4
@@ -61,7 +63,7 @@ export default function Footer() {
                 letterSpacing: "0.3em",
                 textTransform: "uppercase",
                 color: "#8D745D",
-                marginBottom: "20px",
+                marginBottom: "16px",
               }}
             >
               Services
@@ -96,7 +98,7 @@ export default function Footer() {
                 letterSpacing: "0.3em",
                 textTransform: "uppercase",
                 color: "#8D745D",
-                marginBottom: "20px",
+                marginBottom: "16px",
               }}
             >
               Find Us
@@ -149,7 +151,7 @@ export default function Footer() {
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 300,
               fontSize: "11px",
-                  color: "#ffffff",
+              color: "#ffffff",
               letterSpacing: "0.05em",
             }}
           >
