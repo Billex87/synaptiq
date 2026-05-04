@@ -49,9 +49,8 @@ export default function ScienceSection() {
   const sectionRef = useScrollAnimation();
   const [videoActive, setVideoActive] = useState(false);
 
-  // Ambient contrast therapy / cold plunge explainer — Andrew Huberman on cold exposure
-  // This is a publicly available science explainer that aligns with the brand's positioning
-  const videoId = "x3MgDtZSABc";
+  // YouTube Shorts — 9:16 vertical format
+  const videoId = "OdrFZRXhyUg";
 
   return (
     <section
@@ -187,52 +186,52 @@ export default function ScienceSection() {
             <div className="h-px flex-1 bg-gold opacity-10" />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            {/* Copy */}
-            <div>
-              <h3
-                style={{
-                  fontFamily: "'Nunito Sans', sans-serif",
-                  fontStretch: "expanded",
-                  fontWeight: 800,
-                  fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
-                  lineHeight: "1.1",
-                  letterSpacing: "0.03em",
-                  textTransform: "uppercase",
-                  color: "#ffffff",
-                  marginBottom: "16px",
-                }}
-              >
-                THE SCIENCE BEHIND
-                <br />
-                <span style={{ color: "#8D745D" }}>COLD EXPOSURE.</span>
-              </h3>
+          {/* Copy — centered above the Short */}
+          <div className="max-w-2xl mx-auto text-center mb-12">
+            <h3
+              style={{
+                fontFamily: "'Nunito Sans', sans-serif",
+                fontStretch: "expanded",
+                fontWeight: 800,
+                fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
+                lineHeight: "1.1",
+                letterSpacing: "0.03em",
+                textTransform: "uppercase",
+                color: "#ffffff",
+                marginBottom: "16px",
+              }}
+            >
+              THE SCIENCE BEHIND
+              <br />
+              <span style={{ color: "#8D745D" }}>COLD EXPOSURE.</span>
+            </h3>
+            <p
+              className="font-body text-sm text-muted-foreground leading-relaxed mb-6"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              Dr. Andrew Huberman breaks down the neurological and physiological
+              mechanisms behind deliberate cold exposure — including the
+              norepinephrine response, dopamine elevation, and why the mental
+              resilience built in cold water transfers directly to performance
+              under stress.
+            </p>
+            <div className="flex items-center justify-center gap-3">
+              <div className="w-1 h-6" style={{ background: "#8D745D" }} />
               <p
-                className="font-body text-sm text-muted-foreground leading-relaxed mb-6"
+                className="font-body text-xs text-muted-foreground"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                Dr. Andrew Huberman breaks down the neurological and
-                physiological mechanisms behind deliberate cold exposure —
-                including the norepinephrine response, dopamine elevation, and
-                why the mental resilience built in cold water transfers directly
-                to performance under stress.
+                Huberman Lab · Stanford Neuroscience
               </p>
-              <div className="flex items-center gap-3">
-                <div
-                  className="w-1 h-8"
-                  style={{ background: "#8D745D" }}
-                />
-                <p
-                  className="font-body text-xs text-muted-foreground"
-                  style={{ fontFamily: "'DM Sans', sans-serif" }}
-                >
-                  Huberman Lab · Stanford Neuroscience
-                </p>
-              </div>
             </div>
+          </div>
 
-            {/* Video player */}
-            <div className="relative aspect-video overflow-hidden border border-foreground/10 group">
+          {/* Video player — 9:16 Shorts, centered */}
+          <div className="flex justify-center">
+            <div
+              className="relative overflow-hidden border border-foreground/10 group"
+              style={{ width: "100%", maxWidth: "360px", aspectRatio: "9/16" }}
+            >
               {!videoActive ? (
                 /* Thumbnail with play button */
                 <button
@@ -241,7 +240,7 @@ export default function ScienceSection() {
                   aria-label="Play video"
                 >
                   <img
-                    src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                    src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
                     alt="Cold exposure science explainer"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
@@ -277,7 +276,7 @@ export default function ScienceSection() {
               ) : (
                 /* Active iframe */
                 <iframe
-                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&color=white`}
+                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&color=white&loop=1&playlist=${videoId}`}
                   title="Cold Exposure Science — Huberman Lab"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
