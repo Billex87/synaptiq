@@ -14,7 +14,7 @@ const services = [
     tagline: "Reset your nervous system.",
     description:
       "Short, controlled cold immersion reduces inflammation, boosts circulation, and sharpens mental resilience. Your body's most powerful reset.",
-    image: "/manus-storage/cold-plunge-hero_34122463.jpg",
+    image: "/images/cold-plunge-hero.jpg",
     icon: Snowflake,
     color: "cold",
     colorValue: "oklch(0.72 0.12 192)",
@@ -27,7 +27,7 @@ const services = [
     tagline: "Intentional heat exposure.",
     description:
       "Not just relaxation — intentional recovery. Heat exposure triggers cellular repair, improves cardiovascular health, and deepens sleep quality.",
-    image: "/manus-storage/sauna-hero_0a9a899e.jpg",
+    image: "/images/sauna-hero.jpg",
     icon: Flame,
     color: "heat",
     colorValue: "oklch(0.72 0.12 55)",
@@ -40,7 +40,7 @@ const services = [
     tagline: "Cellular energy, restored.",
     description:
       "Targeted wavelengths penetrate deep into tissue, stimulating mitochondrial function. Accelerate recovery, reduce pain, and improve skin health.",
-    image: "/manus-storage/red-light-hero_5dd3f046.jpg",
+    image: "/images/red-light-hero.jpg",
     icon: Zap,
     color: "light-therapy",
     colorValue: "oklch(0.65 0.22 25)",
@@ -53,7 +53,7 @@ const services = [
     tagline: "Clear the recovery gap.",
     description:
       "Pneumatic compression stimulates lymphatic flow and improves circulation — clearing buildup, reducing pressure, and accelerating the way your body actually recovers.",
-    image: "/manus-storage/compression-hero_0c8517b6.jpg",
+    image: "/images/compression-hero.jpg",
     icon: Wind,
     color: "cold",
     colorValue: "oklch(0.72 0.12 192)",

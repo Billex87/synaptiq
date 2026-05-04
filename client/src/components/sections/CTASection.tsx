@@ -54,7 +54,7 @@ export default function CTASection() {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="/manus-storage/hero-bg_3c33ab06.jpg"
+          src="/images/hero-bg.jpg"
           alt=""
           className="w-full h-full object-cover opacity-20"
         />

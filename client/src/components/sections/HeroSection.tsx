@@ -40,7 +40,7 @@ export default function HeroSection() {
         }}
       >
         <img
-          src="/manus-storage/hero-bg_3c33ab06.jpg"
+          src="/images/hero-bg.jpg"
           alt="Synaptiq luxury wellness spa"
           className="w-full h-full object-cover"
           style={{ transform: "scale(1.1)", transformOrigin: "center center" }}
