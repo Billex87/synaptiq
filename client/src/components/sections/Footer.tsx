@@ -163,7 +163,10 @@ export default function Footer() {
               fontSize: "9px",
               letterSpacing: "0.25em",
               textTransform: "uppercase",
-              color: "#8D745D",
+              background: "linear-gradient(135deg, #8D745D 0%, #8D5027 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
             }}
           >
             Recover With Purpose.

@@ -94,7 +94,16 @@ export default function HeroSection() {
         >
           RECOVER
           <br />
-          <span style={{ color: "#8D745D" }}>WITH PURPOSE.</span>
+          <span
+            style={{
+              background: "linear-gradient(135deg, #8D745D 0%, #8D5027 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            WITH PURPOSE.
+          </span>
         </h1>
 
         {/* Subheadline */}
@@ -121,8 +130,12 @@ export default function HeroSection() {
         >
           <button
             onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
-            className="font-body text-sm tracking-[0.15em] uppercase px-10 py-4 text-black font-medium transition-all duration-300"
-            style={{ background: "#8D745D", fontFamily: "'DM Sans', sans-serif" }}
+            className="font-body text-sm tracking-[0.15em] uppercase px-10 py-4 font-medium transition-all duration-300"
+            style={{
+              background: "linear-gradient(135deg, #8D745D 0%, #8D5027 100%)",
+              color: "#000000",
+              fontFamily: "'DM Sans', sans-serif",
+            }}
           >
             Join the Waitlist
           </button>
