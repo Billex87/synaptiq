@@ -4,7 +4,7 @@
  */
 export const config = {
   /** The name of the person doing the inviting (you). */
-  yourName: "Alex",
+  yourName: "Billy",
 
   /** Optional: her name. Leave "" to keep the copy generic. */
   herName: "",
@@ -16,7 +16,7 @@ export const config = {
    * Where the booking details are sent when she taps "Let {yourName} know".
    * Put your own email here. Leave "" to hide that button entirely.
    */
-  notifyEmail: "you@example.com",
+  notifyEmail: "mynameisbillex@gmail.com",
 
   /** Time slots offered for each day she can pick. */
   timeSlots: ["6:00 PM", "6:30 PM", "7:00 PM", "7:30 PM", "8:00 PM", "8:30 PM"],
